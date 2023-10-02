@@ -7,26 +7,26 @@
       :options="options"
     />
     <div class="denied__wrapper">
-      <h1>{{ notFound.code }}</h1>
-      <h3 v-html="notFound.message"></h3>
+      <h1>{{ pageError.code }}</h1>
+      <h3 v-html="pageError.message"></h3>
       <img id="astronaut" src="@/assets/images/astronaut.svg" />
       <img id="planet" src="@/assets/images/planet.svg" />
       <a href="#"
-        ><button class="denied__link" @click="goHome">Go Home</button></a
+        ><button class="denied__link" @click="goBack">Go Back</button></a
       >
     </div>
   </div>
 </template>
 
 <script>
-import particles from "@/assets/json/presets/particles_star.json";
+import particles from "@/assets/json/presets/particles.json";
 
 import { loadFull } from "tsparticles";
 import { mapState } from "vuex";
 export default {
-  name: "NotFound",
+  name: "PageError",
   computed: {
-    ...mapState(["notFound"]),
+    ...mapState(["pageError"]),
   },
   data() {
     return {
@@ -38,8 +38,8 @@ export default {
     particlesInit(engine) {
       loadFull(engine);
     },
-    goHome() {
-      this.$router.push({ path: "/" });
+    goBack() {
+      this.$router.back();
     },
   },
   mounted() {

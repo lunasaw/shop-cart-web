@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "@/views/HomeView.vue";
 import NotFound from "@/views/404/NotFound.vue";
+import PageError from "@/views/500/PageError.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -18,6 +19,11 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+  },
+  {
+    path: "/error",
+    name: "500",
+    component: PageError,
   },
   {
     path: "/*",

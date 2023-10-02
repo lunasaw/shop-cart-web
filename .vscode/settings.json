@@ -6,5 +6,7 @@
     "workbench.editor.scrollToSwitchTabs": false,
     "workbench.editor.showTabs": true,
     "files.autoSave": "afterDelay",
-    "vue.codeActions.enabled": false
+    "vue.codeActions.enabled": false,
+    "editor.minimap.maxColumn": 140,
+    "prettier.printWidth": 100
 }
