@@ -15,10 +15,10 @@ const data = {
     },
   },
 
-  mutations: {
-    // actions: {},
-    // getters: {}
-  },
+  getters: {},
+  mutations: {},
+  actions: {},
+  modules: {},
 };
 
 const store = new Vuex.Store(data);

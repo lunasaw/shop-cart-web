@@ -1,28 +1,36 @@
 <template>
-  <div id="app">
-    <router-view />
+  <div class="app-container">
+    <!-- Header 区域 -->
+    <cart-header></cart-header>
+
+    <!-- 商品 Item 项组件 -->
+    <cart-item></cart-item>
+    <cart-item></cart-item>
+    <cart-item></cart-item>
+
+    <!-- Foote 区域 -->
+    <cart-footer></cart-footer>
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import CartHeader from "@/components/cart-header.vue";
+import CartFooter from "@/components/cart-footer.vue";
+import CartItem from "@/components/cart-item.vue";
 
-nav {
-  padding: 30px;
+export default {
+  name: "App",
+  components: {
+    CartHeader,
+    CartFooter,
+    CartItem,
+  },
+};
+</script>
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+<style lang="less" scoped>
+.app-container {
+  padding: 50px 0;
+  font-size: 14px;
 }
 </style>
