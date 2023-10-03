@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import cart from "./modules/cart";
 Vue.use(Vuex);
 const data = {
   state: {
@@ -18,7 +19,7 @@ const data = {
   getters: {},
   mutations: {},
   actions: {},
-  modules: {},
+  modules: { cart },
 };
 
 const store = new Vuex.Store(data);

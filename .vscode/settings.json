@@ -9,5 +9,6 @@
     "vue.codeActions.enabled": false,
     "editor.minimap.maxColumn": 140,
     "prettier.printWidth": 100,
-    "prettier.trailingComma": "none"
+    "prettier.trailingComma": "none",
+    "files.eol": "\n"
 }

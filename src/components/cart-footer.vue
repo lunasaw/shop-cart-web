@@ -2,8 +2,8 @@
   <div class="footer-container">
     <!-- 中间的合计 -->
     <div>
-      <span>共 xxx 件商品，合计：</span>
-      <span class="price">￥xxx</span>
+      <span>共 {{ totalCount }}件商品，合计：</span>
+      <span class="price">￥{{ totalPrice }}</span>
     </div>
     <!-- 右侧结算按钮 -->
     <button class="btn btn-success btn-settle">结算</button>
@@ -13,6 +13,16 @@
 <script>
 export default {
   name: "CartFooter",
+  props: {
+    totalCount: {
+      type: Number,
+      default: 0,
+    },
+    totalPrice: {
+      type: Number,
+      default: 0,
+    },
+  },
 };
 </script>
 
