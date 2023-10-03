@@ -1,4 +1,4 @@
-# preview-web
+# shop-cart-web
 
 ## Project setup
 ```
